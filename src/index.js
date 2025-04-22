@@ -1,13 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Contact from "./Contact";
+import "./style.css";
+import Forum from "./Forum";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Contact />
+    <Forum />
   </React.StrictMode>
 );
 
