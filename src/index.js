@@ -3,12 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import "./style.css";
 import reportWebVitals from "./reportWebVitals";
-import Forecast from "./component/hookChapter/Forecast";
+import Shop from "./component/hookChapter/shop";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Forecast />
+    <Shop />
   </React.StrictMode>
 );
 
