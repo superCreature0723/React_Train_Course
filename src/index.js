@@ -3,12 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import "./style.css";
 import reportWebVitals from "./reportWebVitals";
-import Timer from "./component/hookChapter/timer";
+import Forecast from "./component/hookChapter/Forecast";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Timer />
+    <Forecast />
   </React.StrictMode>
 );
 
