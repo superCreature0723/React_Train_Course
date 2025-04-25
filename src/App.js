@@ -18,17 +18,39 @@ export default function App() {
     },
   ]);
 
+  const addThought = (text) => {
+    const newThought = {
+      id: generateId(),
+      text,
+      expiresAt: getNewExpirationTime(),
+    };
+    if (text.length > 0) {
+      setThoughts((prevThoughts) => [newThought, ...prevThoughts]);
+    }
+  };
+  const removeThought = (id) => {
+    setThoughts((prevThoughts) => prevThoughts.filter((thought) => thought.id !== id));
+  };
+
+
   return (
     <div className="App">
       <header>
         <h1>Passing Thoughts</h1>
       </header>
       <main>
-        <AddThoughtForm />
+        <AddThoughtForm addThought={addThought} />
         <ul className="thoughts">
-          {thoughts.map((thought) => (
-            <Thought key={thought.id} thought={thought} />
-          ))}
+          {thoughts.map((thought) => {
+            console.log(thought); // Check the structure of thought
+            return (
+              <Thought
+                key={thought.id}
+                thought={thought}
+                removeThought={removeThought}
+              />
+            );
+          })}
         </ul>
       </main>
     </div>

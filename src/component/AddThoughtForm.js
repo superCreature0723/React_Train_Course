@@ -9,6 +9,8 @@ export function AddThoughtForm(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    props.addThought(text);
   };
 
   return (
