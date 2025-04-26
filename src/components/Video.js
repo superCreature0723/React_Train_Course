@@ -1,7 +1,7 @@
-function Video() {
+function Video(props) {
   return (
     <div>
-      <video controls autostart autoPlay muted />
+      <video src={props.src} controls autostart autoPlay muted />
     </div>
   );
 }

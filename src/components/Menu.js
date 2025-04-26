@@ -1,6 +1,10 @@
-function Menu() {
+function Menu(props) {
+  const clickHandler = (event) => {
+    const name = event.target.value;
+    props.onSelectVideo(name);
+  };
   return (
-    <form>
+    <form onClick={clickHandler}>
       <input type="radio" name="src" value="fast" /> fast
       <input type="radio" name="src" value="slow" /> slow
       <input type="radio" name="src" value="cute" /> cute
