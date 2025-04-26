@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { get } from "./../../mockBackend/fetch";
+import { get } from "../../mockBackend/fetch";
 
 export default function Shop() {
   const [categories, setCategories] = useState(null);
